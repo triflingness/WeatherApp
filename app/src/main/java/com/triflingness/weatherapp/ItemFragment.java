@@ -23,10 +23,8 @@ public class ItemFragment extends Fragment {
     private int screenWidth;
     private int screenHeight;
 
-    private int[] imageArray = new int[]{R.drawable.sprout, R.drawable.sprout,
-            R.drawable.sprout, R.drawable.sprout, R.drawable.sprout,
-            R.drawable.sprout, R.drawable.sprout, R.drawable.sprout,
-            R.drawable.sprout, R.drawable.sprout};
+    private int[] imageArray = new int[]{R.drawable.dogs, R.drawable.dogs1,
+            R.drawable.dogs2, R.drawable.sprout};
 
     public static Fragment newInstance(MainActivity context, int pos, float scale) {
         Bundle b = new Bundle();
@@ -60,7 +58,7 @@ public class ItemFragment extends Fragment {
         ImageView imageView = (ImageView) linearLayout.findViewById(R.id.pagerImg);
 
         textView.setText("Carousel item: " + postion);
-        imageView.setLayoutParams(layoutParams);
+//        imageView.setLayoutParams(layoutParams);
         imageView.setImageResource(imageArray[postion]);
 
         //handling click event

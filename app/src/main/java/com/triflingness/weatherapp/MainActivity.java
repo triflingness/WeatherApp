@@ -10,12 +10,12 @@ public class MainActivity extends AppCompatActivity {
     public final static int LOOPS = 1000;
     public CarouselPagerAdapter adapter;
     public ViewPager pager;
-    public static int count = 10; //ViewPager items size
+    public static int count = 3; //ViewPager items size
     /**
      * You shouldn't define first page = 0.
      * Let define firstpage = 'number viewpager size' to make endless carousel
      */
-    public static int FIRST_PAGE = 10;
+    public static int FIRST_PAGE = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void pagerActivity() {
-        //set page margin between pages for viewpager
+//        set page margin between pages for viewpager
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         int pageMargin = ((metrics.widthPixels / 4) * 2);

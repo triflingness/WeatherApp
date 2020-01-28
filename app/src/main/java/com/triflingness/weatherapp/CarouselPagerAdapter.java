@@ -23,6 +23,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
     @Override
     public Fragment getItem(int position) {
         // make the first pager bigger than others
+        // 해당하는 page의 fragment를 생성한다.
         try {
             if (position == MainActivity.FIRST_PAGE)
                 scale = BIG_SCALE;
@@ -39,13 +40,14 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
 
     @Override
     public int getCount() {
-        int count = 0;
-        try {
-            count = MainActivity.count * MainActivity.LOOPS;
-        } catch (Exception e) {
-            // TODO: handle exception
-            e.printStackTrace();
-        }
+        //page의 총 개수 설정
+        int count = 3;
+//        try {
+//            count = MainActivity.count * MainActivity.LOOPS;
+//        } catch (Exception e) {
+//            // TODO: handle exception
+//            e.printStackTrace();
+//        }
         return count;
     }
 
